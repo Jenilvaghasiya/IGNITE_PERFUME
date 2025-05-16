@@ -1,0 +1,223 @@
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pop {
+    0% { transform: scale(0.9); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes scale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes confettiFall {
+    0% { 
+      transform: translateY(-100vh) rotate(0deg); 
+      opacity: 1;
+    }
+    100% { 
+      transform: translateY(100vh) rotate(360deg); 
+      opacity: 0;
+    }
+  }
+  
+  @keyframes noteChange {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Element Animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-pop {
+    animation: pop 0.4s ease-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+  }
+  
+  .note-changed {
+    animation: noteChange 0.5s ease;
+  }
+  
+  .pulse {
+    animation: pulse 0.5s ease;
+  }
+  
+  .size-option {
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .size-option.active {
+    background-color: #f0f7ff;
+    font-weight: bold;
+  }
+  
+  /* Confetti Animation */
+  .confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    animation: confettiFall 3s linear forwards;
+  }
+  
+  /* Perfume Bottle Animation */
+  .perfume-bottle-animation {
+    position: relative;
+    height: 100px;
+    margin: 0 auto;
+    width: 60px;
+  }
+  
+  .bottle {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 80px;
+    border: 3px solid rgba(255,255,255,0.8);
+    border-radius: 5px 5px 20px 20px;
+    z-index: 2;
+    margin-left: -4.5%;
+  }
+  
+  .liquid {
+    position: absolute;
+    bottom: 10px;
+    width: 54px;
+    background: linear-gradient(to right, #f3ff4a, #ffc0cb, #f3e5ab);
+    animation: liquidFlow 4s ease-in-out infinite alternate;
+    border-radius: 0 0 15px 15px;
+    z-index: 1;
+    margin-bottom: -18.5%;
+  }
+  
+  @keyframes liquidFlow {
+    0% { height: 10px; opacity: 0.7; }
+    50% { height: 50px; opacity: 1; }
+    100% { height: 10px; opacity: 0.7; }
+  }
+  
+  /* Note Preview Bars */
+  .note-preview {
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+  }
+  
+  .preview-bar {
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+  
+  /* Submit Button Animation */
+  .submit-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .submit-btn .btn-icon {
+    display: inline-block;
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  .submit-btn .btn-icon:first-child {
+    animation-delay: 0.1s;
+  }
+  
+  .submit-btn .btn-icon:last-child {
+    animation-delay: 0.3s;
+  }
+  
+  /* Info Toggle Animation */
+  .info-toggle {
+    transition: all 0.3s ease;
+  }
+  
+  .info-toggle:hover {
+    transform: scale(1.05);
+  }
+  
+  .animate-expand {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  /* Note Bullets */
+  .note-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .top-note {
+    background-color: #F3FF4A;
+  }
+  
+  .middle-note {
+    background-color: #FFC0CB;
+  }
+  
+  .base-note {
+    background-color: #F3E5AB;
+  }

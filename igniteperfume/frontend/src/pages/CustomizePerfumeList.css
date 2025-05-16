@@ -1,0 +1,29 @@
+/* path: frontend/src/pages/CustomizePerfumeList.css */
+
+.custom-perfume-list-page {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.custom-perfume-list-page .card {
+  transition: transform 0.2s;
+}
+
+.custom-perfume-list-page .card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+.text-center {
+  padding: 20px;
+  font-size: 1.2rem;
+}
